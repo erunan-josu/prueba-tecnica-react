@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { getData } from '../api/data'
 import List from '../components/List/List'
+import Loader from '../components/Loader/Loader'
 
 const Series = () => {
   const [filter, setFilter] = useState<Item[]>([])
@@ -16,7 +17,7 @@ const Series = () => {
 
   return (
     <section className="movies">
-      <List list={filter} />
+      {filter.length < 1 ? <Loader /> : <List list={filter} />}
     </section>
   )
 }

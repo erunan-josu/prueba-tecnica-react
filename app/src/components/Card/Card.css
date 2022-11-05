@@ -13,9 +13,12 @@
 }
 
 .card figcaption {
+  cursor: pointer;
   padding: 0.5rem;
-  height: 50px;
+  height: 80px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  background: #007cff;
+  color: #f9f9f9;
 }

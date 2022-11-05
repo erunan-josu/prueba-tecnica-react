@@ -5,14 +5,16 @@ interface Props {
 }
 
 const Poster = ({ img, name }: Props) => {
+  const { height, width, url } = img
+  console.log(height)
   return (
     <img
-      src={img.url}
+      src={url}
       alt={name}
       onError={(e) => {
         imgErrorHandler(e)
       }}
-      style={{ width: `${img.width}px` }}
+      style={{ width: `${width}px`, height: `${height}` }}
     />
   )
 }
