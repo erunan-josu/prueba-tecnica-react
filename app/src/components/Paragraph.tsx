@@ -1,4 +1,4 @@
-const Paragraph = ({ text }: { text: string }) => {
+const Paragraph = ({ text }: { text: string | undefined | number }) => {
   return <p>{text}</p>
 }
 

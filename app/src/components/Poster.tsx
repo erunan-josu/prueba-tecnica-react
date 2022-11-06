@@ -6,7 +6,6 @@ interface Props {
 
 const Poster = ({ img, name }: Props) => {
   const { height, width, url } = img
-  console.log(height)
   return (
     <img
       src={url}

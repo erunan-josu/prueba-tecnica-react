@@ -1,17 +1,22 @@
 import './List.css'
 import Card from '../Card/Card'
-import Loader from '../Loader/Loader'
+import React from 'react'
 interface Props {
   list: Item[]
+  state: boolean
+  setModal: React.Dispatch<React.SetStateAction<boolean>>
+  setDetails: React.Dispatch<React.SetStateAction<Item | null>>
 }
-const List = ({ list }: Props) => (
+const List = ({ list, state, setModal, setDetails }: Props) => (
   <ul className={'list'}>
     {list?.map((movie: Item) => {
       return (
         <Card
           key={movie.title}
-          img={movie.images['Poster Art']}
-          name={movie.title}
+          item={movie}
+          state={state}
+          setModal={setModal}
+          setDetails={setDetails}
         />
       )
     })}
