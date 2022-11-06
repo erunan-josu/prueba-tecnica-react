@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import closeIcon from '../../public/closeIcon.svg'
+import { imgErrorHandler } from '../utils/utils'
 import Paragraph from './Paragraph'
 
 interface Props {
@@ -15,10 +16,14 @@ const Modal = ({ item, state, setState }: Props) => {
         <ModalContainer>
           <ModalHeader></ModalHeader>
           <CloseButton onClick={() => setState(!state)}>
-            <img src={closeIcon} alt="close icon" />
+            <img
+              src={closeIcon}
+              alt="close icon"
+              onError={(e) => imgErrorHandler(e)}
+            />
           </CloseButton>
           <DetailsContainer>
-            <img src={item?.images['Poster Art'].url} alt="" />
+            <img src={item?.images['Poster Art'].url} alt={'movie poster'} />
             <Details>
               <Paragraph text={item?.title} />
               <Paragraph text={item?.releaseYear} />
@@ -35,6 +40,7 @@ export default Modal
 const Overlay = styled.div`
   width: 100vw;
   height: 100vh;
+  padding: 2rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -46,13 +52,20 @@ const Overlay = styled.div`
 `
 
 const ModalContainer = styled.div`
+  max-height: 50vh;
   width: 90%;
   max-width: 500px;
   min-height: 100px;
   padding: 1.25rem;
   background: var(--background);
   position: relative;
+  border: 2px solid #f9f9f9;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  @media screen and (max-width: 590px) {
+    overflow-y: scroll;
+    max-height: 50vh;
+  }
 `
 
 const ModalHeader = styled.div`
@@ -93,6 +106,7 @@ const CloseButton = styled.button`
 const DetailsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   img {
     width: 40%;

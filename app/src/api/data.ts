@@ -8,6 +8,7 @@ export const getData = async (type: string) => {
       item.images['Poster Art'].width = 180
       return item
     })
+    .sort((a: Item, b: Item) => (a.title < b.title ? -1 : 1))
 
   return filter
 }

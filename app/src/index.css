@@ -24,6 +24,11 @@ body {
   background-color: var(--background);
 }
 
+button {
+  cursor: pointer;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+}
+
 li {
   list-style: none;
 }

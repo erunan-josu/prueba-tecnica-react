@@ -1,15 +1,52 @@
 header {
-  min-height: 10vh;
-  padding: 1rem 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 2rem;
+  min-height: 130px;
 }
 
-header h1,
+header .top-header {
+  padding: 1rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  background: var(--blue);
+}
+
+header .top-header .login-box {
+  display: flex;
+  gap: 1rem;
+}
+
+header .top-header .login-box button {
+  padding: 0.4rem 1.5rem;
+  color: var(--white);
+  border: none;
+  transition: all 0.4 ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+
+header .top-header .login-box button:first-child {
+  background: none;
+}
+header .top-header .login-box button:first-child:hover {
+  border-bottom: 1px solid var(--white);
+}
+
+header .top-header .login-box button:nth-child(2) {
+  background: var(--background);
+}
+
 header h2 {
-  width: 100%;
-  padding: 0 4rem;
+  padding: 1rem 4rem;
+  color: var(--blue);
+}
+
+@media screen and (max-width: 649px) {
+  header .top-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  header h2 {
+    text-align: center;
+  }
 }

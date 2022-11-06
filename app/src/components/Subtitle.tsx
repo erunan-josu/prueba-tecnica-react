@@ -1,5 +1,5 @@
 const Subtitle = ({ text }: { text: string }) => {
-  return <h1>{text}</h1>
+  return <h2>{text}</h2>
 }
 
 export default Subtitle

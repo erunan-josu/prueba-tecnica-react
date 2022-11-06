@@ -1,0 +1,12 @@
+.error-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.error-section a {
+  padding: 0.5rem 2rem;
+  background: var(--blue);
+}

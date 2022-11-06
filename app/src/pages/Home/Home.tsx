@@ -13,7 +13,7 @@ const Home: React.FunctionComponent = () => {
               src="https://res.cloudinary.com/dieasyxbw/image/upload/v1667644469/online-shop/movies_wbabnd.jpg"
               alt="movies"
             />
-            <Paragraph text={'popular Movies'} />
+            <Paragraph text={'Popular Movies'} />
           </NavLink>
         </li>
         <li className="series-li">
