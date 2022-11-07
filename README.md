@@ -6,7 +6,7 @@
 
 Cambio el contenido de total a un objeto con la propiedad total ya que JSON_Server utiliza arrays u objetos.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/176bb91a-839f-4542-be10-a0b7a1683c52/Untitled.png)
+![Untitled](https://res.cloudinary.com/dieasyxbw/image/upload/v1667645768/online-shop/series_g0dvwn.jpg)
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c79b5b2b-7c0e-45ea-b1f1-cd3d716851d2/Untitled.png)
 
